@@ -1,0 +1,139 @@
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px 22px;
+    padding: 12px 22px;
+    margin: 0;
+    border-bottom: 1px solid #ddd2c6;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.logo__mark {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    background-color: #c2410c;
+    display: inline-block;
+}
+
+.nav {
+    display: flex;
+    flex: 1;
+    gap: 2px;
+}
+
+.nav__link {
+    padding: 7px 12px;
+    margin: 0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #6b5f54;
+}
+
+.nav__link:hover {
+    color: #1a1410;
+}
+
+.nav__link[aria-current="page"] {
+    background-color: #c2410c;
+    color: #fff;
+    font-weight: 600;
+}
+
+.theme__btn {
+    padding: 5px 11px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #efe9e2;
+    color: #1a1410;
+    cursor: pointer;
+}
+
+/* Кнопка: самі значки малюються псевдоелементами, в HTML кнопка порожня */
+.theme-btn {
+  position: relative;
+  width: 36px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: #efe9e2;
+  color: #1a1410;               /* від цього кольору залежить значок */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-btn::before,
+.theme-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: currentColor;
+  transition: all 0.35s ease;
+}
+
+/* ☀ ДЕНЬ: ::before це диск сонця */
+.theme-btn::before {
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 0 0 currentColor;
+}
+
+/* ☀ ДЕНЬ: ::after це 8 променів (крапка 2px і 8 тіней навколо неї) */
+.theme-btn::after {
+  width: 2px;
+  height: 2px;
+  transform: translate(-50%, -50%) rotate(0) scale(1);
+  box-shadow:
+    0 -8px 0 0 currentColor,
+    0 8px 0 0 currentColor,
+    8px 0 0 0 currentColor,
+    -8px 0 0 0 currentColor,
+    6px 6px 0 0 currentColor,
+    -6px 6px 0 0 currentColor,
+    6px -6px 0 0 currentColor,
+    -6px -6px 0 0 currentColor;
+}
+
+/* 🌙 НІЧ: кнопка стає темною, значок жовтуватим */
+.theme-btn[aria-pressed="true"] {
+  background: #2a2420;
+  color: #fde68a;
+}
+
+/* 🌙 НІЧ: ::before перетворюється на півмісяць (диск прозорий, форму дає внутрішня тінь) */
+.theme-btn[aria-pressed="true"]::before {
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  box-shadow: inset -5px -3px 0 0 currentColor;
+  transform: translate(calc(-50% - 2px), -50%) rotate(-20deg);
+}
+
+/* 🌙 НІЧ: промені зменшуються до нуля й зникають */
+.theme-btn[aria-pressed="true"]::after {
+  transform: translate(-50%, -50%) rotate(90deg) scale(0);
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-btn,
+  .theme-btn::before,
+  .theme-btn::after {
+    transition: none;
+  }
+}
