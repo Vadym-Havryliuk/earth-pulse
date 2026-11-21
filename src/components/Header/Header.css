@@ -43,97 +43,36 @@
     color: #1a1410;
 }
 
-.nav__link[aria-current="page"] {
+.nav__link.active {
     background-color: #c2410c;
     color: #fff;
     font-weight: 600;
 }
 
-.theme__btn {
-    padding: 5px 11px;
+.theme-btn {
+    display: grid;
+    place-items: center; 
+    width: 36px;
+    height: 32px;
+    padding: 0;
     border: 0;
     border-radius: 10px;
-    font-size: 13px;
-    font-weight: 500;
-    background-color: #efe9e2;
+    background: #efe9e2;
     color: #1a1410;
     cursor: pointer;
 }
 
-/* Кнопка: самі значки малюються псевдоелементами, в HTML кнопка порожня */
-.theme-btn {
-  position: relative;
-  width: 36px;
-  height: 32px;
-  padding: 0;
-  border: 0;
-  border-radius: 10px;
-  background: #efe9e2;
-  color: #1a1410;               /* від цього кольору залежить значок */
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.theme-btn::before,
-.theme-btn::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  background: currentColor;
-  transition: all 0.35s ease;
-}
-
-/* ☀ ДЕНЬ: ::before це диск сонця */
 .theme-btn::before {
-  width: 10px;
-  height: 10px;
-  transform: translate(-50%, -50%);
-  box-shadow: inset 0 0 0 0 currentColor;
+    content: "";
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    background: linear-gradient(to right, currentColor 50%, transparent 50%);
 }
 
-/* ☀ ДЕНЬ: ::after це 8 променів (крапка 2px і 8 тіней навколо неї) */
-.theme-btn::after {
-  width: 2px;
-  height: 2px;
-  transform: translate(-50%, -50%) rotate(0) scale(1);
-  box-shadow:
-    0 -8px 0 0 currentColor,
-    0 8px 0 0 currentColor,
-    8px 0 0 0 currentColor,
-    -8px 0 0 0 currentColor,
-    6px 6px 0 0 currentColor,
-    -6px 6px 0 0 currentColor,
-    6px -6px 0 0 currentColor,
-    -6px -6px 0 0 currentColor;
-}
-
-/* 🌙 НІЧ: кнопка стає темною, значок жовтуватим */
-.theme-btn[aria-pressed="true"] {
-  background: #2a2420;
-  color: #fde68a;
-}
-
-/* 🌙 НІЧ: ::before перетворюється на півмісяць (диск прозорий, форму дає внутрішня тінь) */
-.theme-btn[aria-pressed="true"]::before {
-  width: 15px;
-  height: 15px;
-  background: transparent;
-  box-shadow: inset -5px -3px 0 0 currentColor;
-  transform: translate(calc(-50% - 2px), -50%) rotate(-20deg);
-}
-
-/* 🌙 НІЧ: промені зменшуються до нуля й зникають */
-.theme-btn[aria-pressed="true"]::after {
-  transform: translate(-50%, -50%) rotate(90deg) scale(0);
-  opacity: 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .theme-btn,
-  .theme-btn::before,
-  .theme-btn::after {
-    transition: none;
-  }
+:root[data-theme="dark"] .theme-btn {
+    background: #2a2420;
+    color: #f6f4f1;
 }

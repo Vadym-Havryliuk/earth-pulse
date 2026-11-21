@@ -1,21 +1,9 @@
 import { useState } from "react";
+import { NavLink } from 'react-router-dom';
 
 import './Header.css';
 
-type NavItem = { id: string; label: string };
-
-const nav: NavItem[] = [
-  { id: "map", label: "Live-карта" },
-  { id: "timeline", label: "Таймлайн" },
-  { id: "compare", label: "Порівняння" },
-  { id: "alerts", label: "Сповіщення" },
-  { id: "archive", label: "Архів" },
-  { id: "learn", label: "Освіта" },
-  { id: "data", label: "Про дані" },
-];
-
 const Header = () => {
-  const [active, setActive] = useState("map");
   const [dark, setDark] = useState(false);
 
   return (
@@ -26,17 +14,13 @@ const Header = () => {
       </div>
 
       <nav className="nav" aria-label="Меню">
-        { nav.map((item) => (
-          <a
-            key={item.id}
-            href={`#${item.id}`}
-            className="nav__link"
-            aria-current={active === item.id ? "page" : undefined}
-            onClick={() => setActive(item.id)}
-          >
-            {item.label}
-          </a>
-        )) }
+        <NavLink to="/" className="nav__link">Live-карта</NavLink>
+        <NavLink to="/timeline" className="nav__link">Таймлайн</NavLink>
+        <NavLink to="/compare" className="nav__link">Порівняння</NavLink>
+        <NavLink to="/alerts" className="nav__link">Сповіщення</NavLink>
+        <NavLink to="/archive" className="nav__link">Архів</NavLink>
+        <NavLink to="/learn" className="nav__link">Освіта</NavLink>
+        <NavLink to="/data" className="nav__link">Про дані</NavLink>
       </nav>
 
       <button 
