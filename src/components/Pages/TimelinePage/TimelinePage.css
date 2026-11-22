@@ -1,0 +1,94 @@
+.timeline-page {
+    width: 1180px;
+    margin: 0 auto;
+    padding: 28px 20px 70px 20px;
+}
+
+.timeline-page__heading {
+    margin: 0 0 6px 0;
+}
+
+.timeline-page__description {
+    margin: 0 0 22px 0;
+    width: 625px;
+}
+
+.timeline-page__buttons {
+    display: flex;
+    margin: 10px 0;
+    gap: 8px;
+}
+
+.timeline-page__button {
+    height: 35px;
+    padding: 5px 13px;
+    border-radius: 17.5px;
+    background-color: #fff;
+    border: 1px solid #ddd2c6;
+    cursor: pointer;
+}
+
+.timeline-page__button.active {
+    color: #fff;
+    background-color: #c2410c;
+}
+
+.timeline-page__card {
+    height: 248px;
+    background-color: #fff;
+    border-radius: 18px;
+    border: 1px solid #ddd2c6;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.timeline-page__graph {
+    height: 180px;
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.timeline-page__activity {
+    flex: 1;
+    background-color: #ddd2c6;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.timeline-page__activity.active {
+    background-color: #c2410c;
+}
+
+.timeline-page__activity:nth-child(1) {
+    height: 36px;
+}
+
+.timeline-page__activity:nth-child(2) {
+    height: 108px;
+}
+
+.timeline-page__activity:nth-child(3) {
+    height: 99px;
+}
+
+.timeline-page__activity:nth-child(4) {
+    height: 90px;
+}
+
+.timeline-page__activity:nth-child(5) {
+    height: 162px;
+}
+
+.timeline-page__activity:nth-child(6) {
+    height: 72px;
+}
+
+.timeline-page__activity:nth-child(7) {
+    height: 63px;
+}
+
+.timeline-page__text {
+    color: #6b5f54;
+}
