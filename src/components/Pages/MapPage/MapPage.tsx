@@ -2,7 +2,7 @@ import './MapPage.css';
 
 const MapPage = () => {
     return (
-        <div className="map-page">
+        <div className="map-page page">
             <h1 className="map-page__heading heading">Live-карта подій</h1>
             <p className="map-page__description description">Землетруси за обраний період. Натисніть подію, щоб відкрити деталі. Дані умовні.</p>
             <div className="map-page__buttons">

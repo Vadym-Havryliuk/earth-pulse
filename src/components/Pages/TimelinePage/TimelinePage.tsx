@@ -2,7 +2,7 @@ import './TimelinePage.css';
 
 const TimelinePage = () => {
     return (
-        <div className="timeline-page">
+        <div className="timeline-page page">
             <h1 className="timeline-page__heading heading">Таймлайн подій</h1>
             <p className="timeline-page__description description">Кількість подій за день.</p>
             <div className="timeline-page__buttons">
