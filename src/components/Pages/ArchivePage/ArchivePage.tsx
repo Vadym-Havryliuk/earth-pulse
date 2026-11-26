@@ -21,8 +21,8 @@ const ArchivePage = () => {
                     <option value="M6">M 6</option>
                 </select>
             </div>
-            <section className="card archive-card" aria-label="Архів подій">
-                <table className="archive-table">
+            <section className="archive-page__card">
+                <table className="archive-page__table">
                     <thead>
                         <tr>
                             <th scope="col">Регіон</th>
@@ -66,7 +66,9 @@ const ArchivePage = () => {
                 </table>
             </section>
             <div className="archive-page__list-switcher">
-                <button></button>
+                <button>&larr; Назад</button>
+                <span>Сторінка 1 з 4</span>
+                <button>Далі &rarr;</button>
             </div>
         </div>
     )

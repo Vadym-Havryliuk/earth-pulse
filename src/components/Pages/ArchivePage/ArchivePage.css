@@ -1,0 +1,84 @@
+.archive-page__heading {
+    margin: 0 0 6px 0;
+}
+
+.archive-page__filter {
+    margin: 14px 0;
+    display: flex;
+    gap: 12px;
+}
+
+.archive-page__card {
+    background-color: #fff;
+    border: 1px solid #ddd2c6;
+    border-radius: 18px;
+    padding: 18px;
+    margin-bottom: 12px;
+}
+
+.archive-page__table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.archive-page__table tr th:nth-child(1) { 
+    width: 35%; 
+}  
+.archive-page__table tr th:nth-child(2) { 
+    width: 25%; 
+} 
+.archive-page__table tr th:nth-child(3) { 
+    width: 20%; 
+}   
+.archive-page__table tr th:nth-child(4) { 
+    width: 20%; 
+}
+
+.archive-page__table th {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 8px 10px;
+    text-transform: uppercase;
+    color: #6b5f54;
+}
+
+.archive-page__table td {
+    padding: 8px 10px;
+}
+
+.archive-page__table tr {
+    border-bottom: 1px solid #ddd2c6;
+}
+
+.archive-page__table .badge {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 3px 10px;
+    background-color: #f97316;
+    border-radius: 12px;
+}
+
+.archive-page__list-switcher {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.archive-page__list-switcher button{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 5px 11px;
+    border-radius: 10px;
+    border: none;
+    background-color: #efe9e2;
+    cursor: pointer;
+}
+
+.archive-page__list-switcher span {
+    color: #6b5f54;
+}

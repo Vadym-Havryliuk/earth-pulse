@@ -1,0 +1,57 @@
+.learn-page__heading {
+    margin: 0 0 6px 0;
+}
+
+.learn-page__description {
+    margin: 0 0 22px 0;
+}
+
+.learn-page__magnitude-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 152px;
+    column-gap: 16px;
+}
+
+.learn-page__magnitude-card {
+    background-color: #fff;
+    padding: 18px;
+    border-radius: 18px;
+    border: 1px solid #ddd2c6;
+}
+
+.learn-page__marnitude-color {
+    height: 6px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.learn-page__magnitude-card:nth-child(1) .learn-page__marnitude-color {
+    background-color: #fbbf24;
+}
+
+.learn-page__magnitude-card:nth-child(2) .learn-page__marnitude-color {
+    background-color: #fb923c;
+}
+
+.learn-page__magnitude-card:nth-child(3) .learn-page__marnitude-color {
+    background-color: #f97316;
+}
+
+.learn-page__magnitude-card:nth-child(4) .learn-page__marnitude-color {
+    background-color: #ef4444;
+}
+
+.learn-page__magnitude-value {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 0 17.5px 0;
+}
+
+.learn-page__magnitude-description {
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: #6b5f54;
+}

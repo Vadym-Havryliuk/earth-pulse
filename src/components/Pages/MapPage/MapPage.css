@@ -96,3 +96,10 @@
     line-height: 19px;
     margin-bottom: 6.5px;
 }
+
+.main-page__sp span {
+    font-size: 12.5px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6b5f54;
+}
